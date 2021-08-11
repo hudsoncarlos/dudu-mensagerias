@@ -12,7 +12,7 @@ namespace RProducer
         static void Main(string[] args)
         {
             // Criando a fabrica
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory() { HostName = "dudu-ubuntu", UserName = "devgordinho", Password = "Rabbitmq@12345" };
             // Criando as conexões com o RabbitMQ
             using (var connection = factory.CreateConnection())
             // Apartir de uma conexão podemos ter vário channels

@@ -8,9 +8,9 @@ namespace RConsumer
 {
     public class RabbitMQConfig
     {
-        private const string HOSTNAME = "localhost";
-        private const string USERNAME = "dudu";
-        private const string PASSWORD = "radeon";        
+        private const string HOSTNAME = "dudu-ubuntu";
+        private const string USERNAME = "devgordinho";
+        private const string PASSWORD = "Rabbitmq@12345";
 
         public static IConnection FabricaConexao(ILogger log)
         {
