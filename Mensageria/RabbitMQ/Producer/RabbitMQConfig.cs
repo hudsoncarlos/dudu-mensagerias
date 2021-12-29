@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RProducer
+namespace Producer
 {
     public class RabbitMQConfig
     {

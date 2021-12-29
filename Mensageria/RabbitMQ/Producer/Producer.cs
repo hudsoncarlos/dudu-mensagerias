@@ -1,9 +1,7 @@
 ﻿using RabbitMQ.Client;
-using System;
-using System.Collections.Generic;
 using System.Text;
 
-namespace RProducer
+namespace Producer
 {
     class Program
     {
@@ -55,9 +53,9 @@ namespace RProducer
                                     arguments: null);
                 Canal.QueueBind("DeadLetterQueue", "DeadLetterExchange", "");
 
-                return new Dictionary<string, object>() 
-                { 
-                    { "x-dead-letter-exchange", "DeadLetterExchange" } 
+                return new Dictionary<string, object>()
+                {
+                    { "x-dead-letter-exchange", "DeadLetterExchange" }
                 };
             }
             catch
