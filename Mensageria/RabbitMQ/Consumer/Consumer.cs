@@ -1,11 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using System;
-using System.Collections.Generic;
 using System.Text;
 
-namespace RConsumer
+namespace Consumer
 {
     class Program
     {
@@ -85,9 +83,9 @@ namespace RConsumer
                 LOG.LogInformation("Fazendo o bind DeadLetterQueue ra DeadLetterExchange - " + DateTime.Now);
                 Canal.QueueBind("DeadLetterQueue", "DeadLetterExchange", "");
 
-                return new Dictionary<string, object>() 
-                { 
-                    { "x-dead-letter-exchange", "DeadLetterExchange" } 
+                return new Dictionary<string, object>()
+                {
+                    { "x-dead-letter-exchange", "DeadLetterExchange" }
                 };
             }
             catch (Exception ex)

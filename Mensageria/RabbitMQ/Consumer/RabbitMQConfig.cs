@@ -1,16 +1,13 @@
 ﻿using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace RConsumer
+namespace Consumer
 {
     public class RabbitMQConfig
     {
-        private const string HOSTNAME = "dudu-ubuntu";
-        private const string USERNAME = "devgordinho";
-        private const string PASSWORD = "Rabbitmq@12345";
+        private const string HOSTNAME = "localhost";
+        private const string USERNAME = "dudu";
+        private const string PASSWORD = "radeon";
 
         public static IConnection FabricaConexao(ILogger log)
         {
@@ -28,7 +25,7 @@ namespace RConsumer
                     Password = PASSWORD
                 }.CreateConnection();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 log.LogError(ex, "Ocorreu um erro ao FabricaConexao");
                 return new ConnectionFactory() { HostName = HOSTNAME }.CreateConnection();
