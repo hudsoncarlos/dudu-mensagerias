@@ -9,20 +9,23 @@ namespace Consumer
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Iniciando Fornecedor.");
+            Console.WriteLine("Hello World!");
 
-            var client = new AmazonSQSClient(RegionEndpoint.SAEast1);
+            var client = new AmazonSQSClient(RegionEndpoint.USEast1);
             var request = new ReceiveMessageRequest
             {
-                QueueUrl = ""
+                QueueUrl = "https://sqs.us-east-1.amazonaws.com/"
             };
 
-            var response = await client.ReceiveMessageAsync(request);
-
-            foreach (var item in response.Messages)
+            while (true)
             {
-                Console.WriteLine(item.Body);
-                await client.DeleteMessageAsync("", item.ReceiptHandle);
+                var response = await client.ReceiveMessageAsync(request);
+
+                foreach (var mensagem in response.Messages)
+                {
+                    Console.WriteLine(mensagem.Body);
+                    await client.DeleteMessageAsync("https://sqs.us-east-1.amazonaws.com/", mensagem.ReceiptHandle);
+                }
             }
         }
     }
