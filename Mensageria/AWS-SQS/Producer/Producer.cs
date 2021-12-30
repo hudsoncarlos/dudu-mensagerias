@@ -7,18 +7,18 @@ namespace Producer
 {
     class Producer
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Iniciando Fornecedor.");
+            Console.WriteLine("Hello World!");
 
-            var client = new AmazonSQSClient(RegionEndpoint.SAEast1);
+            var client = new AmazonSQSClient(RegionEndpoint.USEast1);
             var request = new SendMessageRequest
             {
-                QueueUrl = "",
-                MessageBody = ""
+                QueueUrl = "https://sqs.us-east-1.amazonaws.com/",
+                MessageBody = "teste 123"
             };
 
-            client.SendMessageAsync(request);
+            await client.SendMessageAsync(request);
         }
     }
 }
