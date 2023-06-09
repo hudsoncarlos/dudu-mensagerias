@@ -8,20 +8,32 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AWS-SQS", "AWS-SQS", "{CB6FA54D-2A48-4FED-BC0C-F0D05EC41775}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kafka", "Kafka", "{AA41F256-1D44-4F18-8730-226D8558B089}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActiveMQ", "ActiveMQ", "{E021DDF4-6D8B-494D-BD19-B8F05050C494}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AWS-SNS", "AWS-SNS", "{A9E4D6B1-6C12-4F61-9C62-C0350291EB2E}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GooglePubSub", "GooglePubSub", "{562FBFC8-BBF1-47E6-B68E-C7825F3B2239}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "RabbitMQ\Consumer\Consumer.csproj", "{5C36A71F-45DF-4FCD-A6EB-7D44DC2B7948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "RabbitMQ\Consumer\Consumer.csproj", "{5C36A71F-45DF-4FCD-A6EB-7D44DC2B7948}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer", "RabbitMQ\Producer\Producer.csproj", "{57F2329A-2F9B-4A5C-AB7B-54F5E42339E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producer", "RabbitMQ\Producer\Producer.csproj", "{57F2329A-2F9B-4A5C-AB7B-54F5E42339E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "AWS-SQS\Consumer\Consumer.csproj", "{D5E10ED5-0496-4B3D-865D-DDD642E80B87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "AWS-SQS\Consumer\Consumer.csproj", "{D5E10ED5-0496-4B3D-865D-DDD642E80B87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer", "AWS-SQS\Producer\Producer.csproj", "{FFBB5385-F764-465E-8313-29F2B79D54F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producer", "AWS-SQS\Producer\Producer.csproj", "{FFBB5385-F764-465E-8313-29F2B79D54F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
